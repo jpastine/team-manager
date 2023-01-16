@@ -13,6 +13,29 @@
     <div>Age:</div>
     <div><%= player.age %></div>
   </section>
+
+  <h2>Statistics</h2>
+  <form
+    id="add-stats-form" 
+    action="/players/<%= player._id %>/stats"
+    method="POST"
+  >
+  <label for="game-input">Game</label>
+  <input type="number" name="game" id="game-input">
+  <label for="points-input">Points</label>
+  <input type="number" name="points" id="points-input">
+  <label for="rebounds-input">Rebounds</label>
+  <input type="number" name="rebounds" id="rebounds-input">
+  <label for="assists-input">Assists</label>
+  <input type="number" name="assists" id="assists-input">
+  <label for="steals-input">Steals</label>
+  <input type="number" name="steals" id="steals-input">
+  <label for="blocks-input">Blocks</label>
+  <input type="number" name="blocks" id="blocks-input">
+  <label for="minutes-input">Minutes</label>
+  <input type="number" name="minutes" id="minutes-input">
+  <button type="submit">Add Stats</button>
+  </form>
     
 
   

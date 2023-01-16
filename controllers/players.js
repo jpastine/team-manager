@@ -1,4 +1,5 @@
 import { Player } from "../models/player.js";
+import { router } from "../routes/teams.js";
 
 function newPlayer(req, res) {
   Player.find({})
@@ -39,9 +40,15 @@ function show(req, res) {
   })
 }
 
+function addStats(req, res) {
+  
+}
+
+
 
 export {
   newPlayer as new,
   create,
   show,
+  addStats,
 }

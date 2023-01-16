@@ -1,4 +1,5 @@
 import { Team } from "../models/team.js";
+import { Player } from "../models/player.js";
 
 function newTeam(req, res) {
   res.render('teams/new', {
@@ -9,7 +10,7 @@ function newTeam(req, res) {
 function create(req, res) {
   Team.create(req.body)
   .then(team => {
-    res.redirect('/teams')
+    res.redirect(`/teams/${team._id}`)
   })
   .catch(err => {
     console.log(err)
@@ -33,10 +34,19 @@ function index(req, res) {
 
 function show(req, res) {
   Team.findById(req.params.id)
+  .populate('players')
   .then(team => {
-    res.render('teams/show', {
-      team,
-      title: "Team Details"
+    Player.find({_id: {$nin: team.players}})
+    .then(players => {
+      res.render('teams/show', {
+        team,
+        title: "Team Details",
+        players,
+      })
+    })
+    .catch(err => {
+      console.log(err);
+      res.redirect('/teams')
     })
   })
   .catch(err => {
@@ -70,6 +80,39 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
+  Team.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(team => {
+    res.redirect(`/teams/${team._id}`)
+  })
+  .catch(err => {
+    console.log(err);
+    res.redirect('/')
+  })
+}
+
+function addToTeam(req, res) {
+  Team.findById(req.params.id)
+  .then(team => {
+    team.players.push(req.body.playerId)
+    team.save()
+    .then(() => {
+      res.redirect(`/teams/${team._id}`)
+    })
+    .catch(err => {
+      console.log(err);
+      res.redirect('/teams')
+    })
+  })
+  .catch(err => {
+    console.log(err);
+    res.redirect('/teams')
+  })
+}
+
 
 export {
   newTeam as new,
@@ -78,4 +121,6 @@ export {
   show,
   deleteTeam as delete,
   edit,
+  update,
+  addToTeam,
 }

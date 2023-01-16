@@ -4,6 +4,15 @@
 </head>
 <body>
   <nav>
+    <a href="/players/new" <%- title === "Add Player" ? 'class="acitve"' : "" %>>
+    ADD PLAYER 
+  </a>
+    <a href="/teams/new" <%- title === "Add Team" ? 'class="active"' : "" %>>
+    ADD TEAM
+  </a>
+    <a href="/teams" <%- title === "All Teams" ? 'class="active"' : ""%>>
+    ALL TEAMS 
+  </a>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>

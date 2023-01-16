@@ -1,0 +1,24 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <div>Team Name:</div>
+    <div><%= team.name %></div>
+    <div>Coach:</div>
+    <div><%= team.coach %></div>
+    <div>Record:</div>
+    <div><%= team.record %></div>
+    <a href="/teams/<%= team._id %>/edit">
+      <button>Edit Team</button>
+    </a>
+  </section>
+
+
+
+
+
+</main>
+
+<%- include('../partials/footer') %> 

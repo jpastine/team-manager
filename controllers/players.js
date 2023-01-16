@@ -41,7 +41,22 @@ function show(req, res) {
 }
 
 function addStats(req, res) {
-  
+  Player.findById(req.params.id)
+  .then(player => {
+    player.stats.push(req.body)
+    player.save()
+    .then(() => {
+      res.redirect(`/players/${player._id}`)
+    })
+    .catch(err => {
+      console.log(err);
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err);
+    res.redirect('/')
+  })
 }
 
 

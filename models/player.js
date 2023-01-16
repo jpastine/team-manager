@@ -2,6 +2,38 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema
 
+const statSchema = new Schema({
+  game: {
+    type: Number,
+    required: true 
+  },
+  points: {
+    type: Number,
+    required: true
+  },
+  rebounds: {
+    type: Number,
+    required: true
+  },
+  assists: {
+    type: Number,
+    required: true
+  },
+  steals: {
+    type: Number,
+    required: true,
+  },
+  blocks: {
+    type: Number,
+    required: true,
+  },
+  minutes: {
+    type: Number,
+    required: true
+  }
+
+})
+
 const playerSchema = new Schema({
   name: { 
     type: String, 
@@ -19,7 +51,8 @@ const playerSchema = new Schema({
   age: {
     type: Number,
     required: true,
-  }
+  },
+  stats: [statSchema]
 }, {
   timeseries: true
 })

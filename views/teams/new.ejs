@@ -3,15 +3,17 @@
 
 <main>
   <h1><%= title %></h1>
-  <form id="new-form" action="/teams" method="POST">
-    <label for="team-input">Team:</label>
-    <input type="text" name="name" id="team-input">
-    <label for="coach-input">Coach:</label>
-    <input type="text" name="coach" id="coach-input">
-    <label for="record-input">Record:</label>
-    <input type="text" name="record" id="record-input">
-    <button type="submit">Add Team</button>
-  </form>
+  <% if (user) { %>
+    <form id="new-form" action="/teams" method="POST">
+      <label for="team-input">Team:</label>
+      <input type="text" name="name" id="team-input">
+      <label for="coach-input">Coach:</label>
+      <input type="text" name="coach" id="coach-input">
+      <label for="record-input">Record:</label>
+      <input type="text" name="record" id="record-input">
+      <button type="submit">Add Team</button>
+    </form>
+  <% } %>
 
 
 

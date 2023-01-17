@@ -19,12 +19,14 @@
           <td><%= team.coach %></td>
           <td><%= team.record %></td>
           <td><a href="/teams/<%= team._id %>">Details</a></td>
-          <td>
-            <form action="/teams/<%= team._id %>?_method=DELETE"
-              method="POST">
-              <button>Delete Team</button>
-            </form>
-          </td>
+          <% if (user) { %>
+            <td>
+              <form action="/teams/<%= team._id %>?_method=DELETE"
+                method="POST">
+                <button>Delete Team</button>
+              </form>
+            </td>
+            <% } %>
         </tr>
       <% }) %>
     </tbody>

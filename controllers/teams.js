@@ -1,6 +1,7 @@
 import { Team } from "../models/team.js";
 import { Player } from "../models/player.js";
 
+
 function newTeam(req, res) {
   res.render('teams/new', {
     title: 'Add Team'
@@ -8,6 +9,7 @@ function newTeam(req, res) {
 }
 
 function create(req, res) {
+  req.body.owner = req.user.profile._id
   Team.create(req.body)
   .then(team => {
     res.redirect(`/teams/${team._id}`)
@@ -34,6 +36,7 @@ function index(req, res) {
 
 function show(req, res) {
   Team.findById(req.params.id)
+  .populate('owner')
   .populate('players')
   .then(team => {
     Player.find({_id: {$nin: team.players}})

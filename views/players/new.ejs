@@ -10,23 +10,25 @@
       <% }) %>
     </select>
   </p>
-  <form id="add-player-form" action="/players" method="POST">
-    <label for="name-input">Name:</label>
-    <input type="text" name="name" id="name-input">
-    <label for="position-input">Position</label>
-    <select name="position" id="position-select">
-      <option value="PG">PG</option>
-      <option value="SG">SG</option>
-      <option value="SF">SF</option>
-      <option value="PF">PF</option>
-      <option value="C">C</option>
-    </select>
-    <label for="height-input">Height</label>
-    <input type="text" name="height" id="height-input-feet">
-    <label for="age-input">Age</label>
-    <input type="number" name="age" id="age-input">
-    <button type="submit">Add Player</button>
-  </form>
+  <% if (user) { %>
+    <form id="add-player-form" action="/players" method="POST">
+      <label for="name-input">Name:</label>
+      <input type="text" name="name" id="name-input">
+      <label for="position-input">Position</label>
+      <select name="position" id="position-select">
+        <option value="PG">PG</option>
+        <option value="SG">SG</option>
+        <option value="SF">SF</option>
+        <option value="PF">PF</option>
+        <option value="C">C</option>
+      </select>
+      <label for="height-input">Height</label>
+      <input type="text" name="height" id="height-input-feet">
+      <label for="age-input">Age</label>
+      <input type="number" name="age" id="age-input">
+      <button type="submit">Add Player</button>
+    </form>
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>

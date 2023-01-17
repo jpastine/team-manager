@@ -19,7 +19,7 @@
           <td><%= team.coach %></td>
           <td><%= team.record %></td>
           <td><a href="/teams/<%= team._id %>">Details</a></td>
-          <% if (user) { %>
+          <% if (team.owner.equals(user?.profile._id)) { %>
             <td>
               <form action="/teams/<%= team._id %>?_method=DELETE"
                 method="POST">

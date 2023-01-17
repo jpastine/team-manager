@@ -3,15 +3,18 @@
 
 <main>
   <h1><%= title %></h1>
-  <form id="new-form" action="/teams/<%= team._id %>?_method=PUT" method="POST">
-    <label for="team-input">Team:</label>
-    <input type="text" name="name" value="<%= team.name %>" id="team-input">
-    <label for="coach-input">Coach:</label>
-    <input type="text" name="coach" value="<%= team.coach %>" id="coach-input">
-    <label for="record-input">Record:</label>
-    <input type="text" name="record" value="<%= team.record %>" id="record-input">
-    <button type="submit">Save Team</button>
-  </form>
+  <% if (team.owner.equals(user?.profile._id)) { %>
+    <form id="new-form" action="/teams/<%= team._id %>?_method=PUT" method="POST">
+      <label for="team-input">Team:</label>
+      <input type="text" name="name" value="<%= team.name %>" id="team-input">
+      <label for="coach-input">Coach:</label>
+      <input type="text" name="coach" value="<%= team.coach %>" id="coach-input">
+      <label for="record-input">Record:</label>
+      <input type="text" name="record" value="<%= team.record %>" id="record-input">
+      <button type="submit">Save Team</button>
+    </form>
+  <% } %>
+   
 
 
 

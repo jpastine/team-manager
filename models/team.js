@@ -12,7 +12,8 @@ const teamSchema = new Schema({
     required: true
   },
   record: Number,
-  players: [{type: Schema.Types.ObjectId, ref: 'Player' }]
+  players: [{type: Schema.Types.ObjectId, ref: 'Player' }], 
+  owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
 }, {
   timestamps: true
 })

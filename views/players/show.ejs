@@ -6,7 +6,7 @@
   <section>
     <div>Player Name:</div>
     <div><%= player.name %></div>
-    <% if (user) { %>
+    <% if (player.owner.equals(user?.profile._id)) { %>
       <form action="/players/<%= player._id %>?_method=DELETE"
         method="POST"
       >
@@ -19,7 +19,7 @@
     <div><%= player.height %></div>
     <div>Age:</div>
     <div><%= player.age %></div>
-    <% if (user) { %>
+    <% if (player.owner.equals(user?.profile._id)) { %>
       <a href="/players/<%= player._id %>/edit">
       <button>Edit Player</button>
     <% } %>

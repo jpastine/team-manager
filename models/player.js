@@ -52,9 +52,10 @@ const playerSchema = new Schema({
     type: Number,
     required: true,
   },
-  stats: [statSchema]
+  owner: {type: Schema.Types.ObjectId, ref: 'Profile'},
+  stats: [statSchema],
 }, {
-  timeseries: true
+  timestamps: true
 })
 
 const Player = mongoose.model('Player', playerSchema)

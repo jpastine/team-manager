@@ -1,5 +1,5 @@
 import { Player } from "../models/player.js";
-import { router } from "../routes/teams.js";
+
 
 function newPlayer(req, res) {
   Player.find({})
@@ -16,6 +16,7 @@ function newPlayer(req, res) {
 }
 
 function create(req, res) {
+  req.body.owner = req.user.profile._id
   Player.create(req.body)
   .then(player => {
     res.redirect('/players/new')

@@ -26,7 +26,7 @@
         </a>
         <% } %>    
   </section>
-  <% if (user) { %>
+  <% if (team.owner.equals(user?.profile._id)) { %>
     <form id="add-player-to-team" action="/teams/<%= team._id %>/players" method="POST">
       <select name="playerId">
         <% players.forEach(player => { %>

@@ -36,7 +36,6 @@ function index(req, res) {
 
 function show(req, res) {
   Team.findById(req.params.id)
-  .populate('owner')
   .populate('players')
   .then(team => {
     Player.find({_id: {$nin: team.players}})

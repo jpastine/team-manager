@@ -59,6 +59,45 @@ function addStats(req, res) {
   })
 }
 
+function deletePlayer(req, res) {
+  Player.findByIdAndDelete(req.params.id)
+  .then(player => {
+    res.redirect('/teams')
+  })
+  .catch(err => {
+    console.log(err);
+    res.redirect('/teams')
+  })
+}
+
+function edit(req, res) {
+  Player.findById(req.params.id)
+  .then(player => {
+    res.render('players/edit', {
+      player,
+      title: "Edit Player"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function update(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === "") delete req.body[key]
+  }
+  Player.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(player => {
+    res.redirect(`/players/${player._id}`)
+  })
+  .catch(err => {
+    console.log(err);
+    res.redirect(`/players/${player._id}`)
+  })
+}
+
 
 
 export {
@@ -66,4 +105,7 @@ export {
   create,
   show,
   addStats,
+  deletePlayer as delete,
+  edit, 
+  update,
 }

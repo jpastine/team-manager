@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/teams/show.css" />
 <%- include('../partials/nav') %>
 
 <main>
@@ -14,9 +15,8 @@
       <ul>
         <% team.players.forEach(player => { %>
           <li><%= player.name %></li>
+          -
           <li><%= player.position %></li>
-          <li><%= player.height %></li>
-          <li><%= player.age %></li>
           <a href="/players/<%= player._id %>">STATS</a>
         <% }) %>
       </ul>

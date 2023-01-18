@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-image: url("../../images/marius-christensen-tVhueFPfd1w-unsplash.jpg");
+  background-image: url("../images/marius-christensen-tVhueFPfd1w-unsplash.jpg");
   /* background-color: gray; */
   /* Use a system font, if none are available use an available sans-sarif font */
   margin: 0;
@@ -29,7 +29,8 @@ body {
 }
 
 body > main {
-  background-image: url("../../media/marius-christensen-tVhueFPfd1w-unsplash.jpg");
+  background-image: url("../images/nick-jio-57rD2oDZquc-unsplash.jpg");
+  background-size: cover;
   grid-area: main;
   display: flex;
   flex-direction: column;

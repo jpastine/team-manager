@@ -88,5 +88,10 @@ section div:nth-child(even) {
   width: 50px;
 }
 
+#delete,
+#edit {
+  padding-top: 10px;
+}
+
 
 

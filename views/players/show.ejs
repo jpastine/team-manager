@@ -73,13 +73,13 @@
   <% } %>
   <% if (player.owner.equals(user?.profile._id)) { %>
     <form action="/players/<%= player._id %>?_method=DELETE"
-      method="POST"
+      method="POST" id="delete"
     >
     <button id="delete-button">Delete Player</button>
   <% } %>
       </form>
   <% if (player.owner.equals(user?.profile._id)) { %>
-    <a href="/players/<%= player._id %>/edit">
+    <a href="/players/<%= player._id %>/edit" id="edit">
     <button id="edit-button">Edit Player</button>
   <% } %>
   </a>

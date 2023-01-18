@@ -29,6 +29,7 @@ body {
 }
 
 body > main {
+  background-image: url("../../media/marius-christensen-tVhueFPfd1w-unsplash.jpg");
   grid-area: main;
   display: flex;
   flex-direction: column;
@@ -43,7 +44,7 @@ body > main h1:first-child {
 
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background-color: orange;
   display: flex;
   justify-content: flex-end;
   align-items: center;

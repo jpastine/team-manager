@@ -6,7 +6,13 @@
   <h1><%= title %></h1>
   <section>
     <div>Team Name:</div>
-    <div><%= team.name %></div>
+    <div><%= team.name %>
+      <% if (team.owner.equals(user?.profile._id)) { %>
+        <a href="/teams/<%= team._id %>/edit">
+          <button id="edit-button">Edit Team</button>
+        </a>
+        <% } %>    
+    </div>
     <div>Coach:</div>
     <div><%= team.coach %></div>
     <div>Record:</div>
@@ -14,17 +20,13 @@
       <div>Players:</div>
       <ul>
         <% team.players.forEach(player => { %>
-          <li><%= player.name %></li>
-          -
-          <li><%= player.position %></li>
-          <a href="/players/<%= player._id %>">STATS</a>
+          <li><%= player.name %> - <%= player.position %>
+          <a href="/players/<%= player._id %>">Stats</a>
+          </li>
         <% }) %>
+        
       </ul>
-      <% if (team.owner.equals(user?.profile._id)) { %>
-        <a href="/teams/<%= team._id %>/edit">
-          <button>Edit Team</button>
-        </a>
-        <% } %>    
+      
   </section>
   <% if (team.owner.equals(user?.profile._id)) { %>
     <form id="add-player-to-team" action="/teams/<%= team._id %>/players" method="POST">
@@ -34,7 +36,7 @@
           </option>
           <% }) %> 
         </select>
-        <button type="submit">Add to Team</button>
+        <button id="add-button" type="submit">Add to Team</button>
         <% } %>
   </form>
 

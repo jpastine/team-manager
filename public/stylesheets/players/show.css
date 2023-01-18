@@ -48,12 +48,44 @@ section div:nth-child(even) {
   font-weight: bold;
 }
 
+#delete-button {
+  background-color: red;
+}
+
 #edit-button {
   background-color: orange;
 }
 
 #add-button {
   background-color: orange;
+}
+
+#game-input {
+  width: 50px;
+}
+
+#points-input {
+  width: 50px;
+}
+
+#rebounds-input {
+  width: 50px;
+}
+
+#assists-input {
+  width: 50px;
+}
+
+#steals-input {
+  width: 50px;
+}
+
+#blocks-input {
+  width: 50px;
+}
+
+#minutes-input {
+  width: 50px;
 }
 
 

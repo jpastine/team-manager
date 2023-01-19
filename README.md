@@ -1,65 +1,26 @@
-# MEN Stack with OAuth Template
+# Welcome to Team Manager
 
-This is a MEN Stack template that includes OAuth.
+Get started [here!](https://team-manager.fly.dev/)
 
-Use this to go build things! 🚀
+![](/public/images/Screenshot%202023-01-19%20at%2010.32.21%20AM.png)
 
-## To Use This Template
+Team Manager is an application where you can easily keep track of your team, its players and their individual stats. Start by signing in to add your team and the players on your team. Quickly update the team's win-loss record and your player's stats after each game to track the progress during the season. You may also view other teams, its players and their stats so you're able to build a strategy for your next game!
 
-__Replace `<name-of-your-app-here>` in the commands below with the name of your app!__
+## Technologies used
+- HTML
+- CSS
+- Git/GitHub
+- Node.js
+- Express
+- MongoDB
+- Embedded JavaScript
+- Google Auth
+- fly.io (deployment)
 
-```bash
-git clone https://github.com/SEI-Remote/men-stack-oauth-template.git <name-of-your-app-here>
-cd <name-of-your-app-here>
-```
+## Credits
+- Background image by Nick Jio (view Nick's unsplash page [here](https://unsplash.com/@nicholasjio))
+- Google Fonts
+- Icon8 (favicon)
+- Favicon.io
 
-Once you are in the project directory:
 
-```bash
-rm -rf .git
-```
-
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
-
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
-
-Re-initialize a git repository:
-
-```bash
-git init
-```
-
-Create a repo for this project on GitHub and add that remote to your project with `git remote add origin Your-repo-URL-here`.
-
-Run npm i to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-touch a .env file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SESSION_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Replace the `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_SECRET`, and `SESSION_SECRET` with values that you provide.
-
-Delete this `README.md` file and finally, make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done!

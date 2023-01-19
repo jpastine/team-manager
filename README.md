@@ -28,7 +28,13 @@ Team Manager is an application where you can easily keep track of your team, its
 ## Ice Box
 - [ ] Add pages for other sports, including football, baseball, soccer, etc.
 - [ ] Add list of all players instead of dropdown.
-- [ ] 
+- [ ] Add place to show stat averages throughout season
+- [ ] Add links or place to upload videos of games and player for scouting.
+
+### Planning materials
+- Planning, wireframe and ERD can be viewed [here](https://trello.com/b/odsINMIc/team-manager)
+
+
 
 
 

@@ -19,10 +19,10 @@
 
   <h2>Statistics</h2>
   <% if (player.stats.length) { %>
-    <table>
+    <table id="stats-table">
       <thead>
         <tr>
-          <th>Game</th>
+          <th>Vs.</th>
           <th>Points</th>
           <th>Rebounds</th>
           <th>Assists</th>
@@ -54,8 +54,8 @@
     action="/players/<%= player._id %>/stats"
     method="POST"
     >
-    <label for="game-input">Game</label>
-    <input type="number" name="game" id="game-input">
+    <label for="game-input">Versus</label>
+    <input type="text" name="game" id="game-input">
     <label for="points-input">Points</label>
     <input type="number" name="points" id="points-input">
     <label for="rebounds-input">Rebounds</label>

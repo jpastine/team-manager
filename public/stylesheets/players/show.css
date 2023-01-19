@@ -61,7 +61,7 @@ section div:nth-child(even) {
 }
 
 #game-input {
-  width: 50px;
+  width: 90px;
 }
 
 #points-input {
@@ -94,8 +94,12 @@ section div:nth-child(even) {
 }
 
 #add-stats-form {
-  background-color: aliceblue;
+  background-color: rgb(48, 160, 165);
+  
 }
 
+#stats-table {
+  background-color: rgb(48, 160, 165);
+}
 
 

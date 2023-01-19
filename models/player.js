@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const statSchema = new Schema({
   game: {
-    type: Number,
+    type: String,
     required: true 
   },
   points: {

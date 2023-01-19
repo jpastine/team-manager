@@ -30,6 +30,7 @@ body {
 body > main {
   background-image: url("../images/nick-jio-57rD2oDZquc-unsplash.jpg");
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   grid-area: main;
   display: flex;

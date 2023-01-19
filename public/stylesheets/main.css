@@ -14,7 +14,6 @@ html {
 }
 
 body {
-  background-image: url("../images/marius-christensen-tVhueFPfd1w-unsplash.jpg");
   /* background-color: gray; */
   /* Use a system font, if none are available use an available sans-sarif font */
   margin: 0;
@@ -31,6 +30,7 @@ body {
 body > main {
   background-image: url("../images/nick-jio-57rD2oDZquc-unsplash.jpg");
   background-size: cover;
+  background-attachment: fixed;
   grid-area: main;
   display: flex;
   flex-direction: column;

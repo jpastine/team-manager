@@ -93,5 +93,9 @@ section div:nth-child(even) {
   padding-top: 10px;
 }
 
+#add-stats-form {
+  background-color: aliceblue;
+}
+
 
 

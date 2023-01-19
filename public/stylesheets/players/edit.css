@@ -3,6 +3,8 @@ form {
   grid-gap: 10px;
   grid-template-columns: auto auto;
   font-size: 20px;
+  background-color: gray;
+  color: lightgray;
 }
 
 form * {

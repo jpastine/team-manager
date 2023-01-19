@@ -1,12 +1,11 @@
-main {
-  background-image: url("../../media/marius-christensen-tVhueFPfd1w-unsplash.jpg");
-}
 
 form {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 10px;
   margin-bottom: 20px;
+  background-color: gray;
+  color: lightgray;
 }
 
 form * {

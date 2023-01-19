@@ -21,6 +21,11 @@ table td {
   font-weight: bold;
 }
 
+#teams-idx {
+  background-color: gray;
+  color: lightgray;
+}
+
 
 
 

@@ -94,12 +94,14 @@ section div:nth-child(even) {
 }
 
 #add-stats-form {
-  background-color: rgb(48, 160, 165);
+  background-color: gray;
+  color: lightgray;
   
 }
 
 #stats-table {
-  background-color: rgb(48, 160, 165);
+  background-color: gray;
+  color: lightgray;
 }
 
 

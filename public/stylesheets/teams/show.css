@@ -36,12 +36,15 @@ table td {
 form * {
   padding: 5px;
   border-radius: 5px;
+  
 }
 
 section {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 16px;
+  background-color: gray;
+  color: lightgray;
 }
 
 section div:nth-child(even) {
@@ -56,5 +59,7 @@ section div:nth-child(even) {
   background-color: orange;
 }
 
+ 
+  
 
 

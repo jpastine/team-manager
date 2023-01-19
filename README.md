@@ -12,15 +12,23 @@ Team Manager is an application where you can easily keep track of your team, its
 - Git/GitHub
 - Node.js
 - Express
-- MongoDB
+- MongoDB/Mongoose
 - Embedded JavaScript
 - Google Auth
 - fly.io (deployment)
+- Trello
 
 ## Credits
 - Background image by Nick Jio (view Nick's unsplash page [here](https://unsplash.com/@nicholasjio))
 - Google Fonts
 - Icon8 (favicon)
 - Favicon.io
+- Dev.to (emojis)
+
+## Ice Box
+- [ ] Add pages for other sports, including football, baseball, soccer, etc.
+- [ ] Add list of all players instead of dropdown.
+- [ ] 
+
 
 

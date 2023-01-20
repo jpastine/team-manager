@@ -48,7 +48,7 @@
     <% } else { %> 
       <h3>No Stats Yet</h3>
   <% } %>
-  <% if (user) { %>
+  <% if (player.owner.equals(user?.profile._id)) { %>
     <form
     id="add-stats-form" 
     action="/players/<%= player._id %>/stats"
